@@ -1,9 +1,9 @@
 module Blorgh::Concerns::Post
   extend ActiveSupport::Concern
 
-  # 'included do' causes the included code to be avaluated in the
+  # 'included do' causes the included code to be evaluated in the
   # context where it is included (post.rb), rather than being
-  # executed in the module's ocntext (blorgh/concerns/models/post).
+  # executed in the module's context (blorgh/concerns/models/post).
   included do
     has_many :comments
     attr_accessor :author_name
